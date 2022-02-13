@@ -1,0 +1,211 @@
+#logo {
+    width: 50vw;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.content-container {
+    display: block;
+    background-color: rgb(250, 192, 202);
+    padding: 1rem 3rem 1rem 3rem;
+}
+
+.error-list {
+    background-color: rgb(236, 93, 93);
+    padding: 10px;
+    border-radius: 15px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 20px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.create-button {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.tab-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 1rem 0 1rem;
+}
+
+.tab-label {
+    background-color: rgb(236, 234, 234);
+    border-bottom: 0.3rem solid #cac5c5;
+    outline: none;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.tab-button:checked + .tab-label {
+    background-color: rgb(179, 224, 241);
+    border-bottom: 0.3rem solid rgb(102, 102, 212);
+    padding: 1rem;
+}
+
+.tab-content {
+    flex-direction: column;
+    display: none;
+    border: none;
+    background-color: white;
+    flex: 1 1;
+    margin: 0 1rem 1rem 1rem;
+    padding: 1rem;
+    overflow: auto;
+}
+
+/* display: block causes the element to be visible, since the default value is none */
+#create-lobby {
+    display: block;
+}
+
+.join-lobby-data {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    height: 100%;
+}
+
+.table-wrapper-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+    margin: 1rem;
+    overflow: hidden;
+}
+
+.table-wrapper {
+    flex: 1;
+    border: 1px solid slategray;
+    overflow-y: scroll;
+}
+
+#refresh-button {
+    margin-bottom: 0.5rem;
+}
+
+#lobby-table {
+    width: 100%;
+}
+
+.lobby-details {
+    display: grid;
+    grid-template-columns: max-content auto;
+    grid-template-rows: min-content min-content min-content min-content min-content min-content min-content minmax(min-content,4rem);
+    column-gap: 2rem;
+    row-gap: 1rem;
+    flex: 2;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: rgb(226, 226, 226);
+    overflow: auto;
+}
+
+.lobby-detail {
+    font-weight: bold;
+}
+
+table {
+    border: 0;
+    border-collapse: collapse;
+}
+
+td, th {
+    text-align: left;
+    padding: 0 5px 0 5px;
+}
+
+th {
+    background-color: white;
+    position: sticky;
+    top: 0;
+    padding: 0.2rem;
+}
+
+tr:nth-child(2n) {
+    background-color: rgb(219, 219, 219);
+}
+
+tr:hover {
+    background-color: rgb(248, 148, 164);
+}
+
+#join-button:disabled {
+    cursor: not-allowed;
+}
+
+#join-button {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+tr[selected="true"] {
+    background-color: #6464de;
+}
+
+@media only screen
+    and (min-device-width: 375px) and (max-device-width: 812px),
+    (orientation: portrait) or (max-aspect-ratio: 4/3) {
+    #logo {
+        width: 95vw;
+    }
+    .tab-header {
+        margin: 0;
+    }
+    .tab-content {
+        padding: 0;
+        margin: 0;
+    }
+
+    .center-container {
+        margin: 0;
+    }
+    .content-container {
+        width: 96%;
+        padding: 2%;
+    }
+    .input-container {
+        align-items: start;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        row-gap: 5px;
+    }
+    .advanced-section {
+        width: 100%;
+    }
+    .input-container > input[type="checkbox"] {
+        width: initial;
+    }
+    .input-container > * {
+        flex-grow: 1;
+    }
+    .create-button {
+        width: 100%;
+    }
+
+    .join-lobby-data {
+        flex-direction: column;
+    }
+    .lobby-details {
+        margin: 0.5rem;
+        padding: 0.5rem;
+        row-gap: 0.5rem;
+    }
+    .table-wrapper-wrapper {
+        margin: 0.5rem;
+    }
+}
